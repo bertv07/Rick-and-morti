@@ -1,0 +1,36 @@
+#contenido{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+.ubica{
+    background-color: #97ce4c;
+    width: 15rem;
+    height: 14rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    transition: .5s;
+}
+
+.ubica:hover{
+    transform: scale(1.25);
+}
+
+button{
+    margin-top: 2rem;
+}
+.ubica p{
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.ubica span{
+    color: #254b02;
+    font-size: 1.2rem;
+    font-weight: 700;
+}

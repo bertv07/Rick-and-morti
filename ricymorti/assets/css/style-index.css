@@ -1,0 +1,225 @@
+*{  
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Poppind', sans-serif;
+}
+body{
+    height: 100%;
+    background-color: #1a1e23;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    color: #97ce4c;
+    letter-spacing: 5px;
+
+}
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .titulo {
+    font-family: "Creepster", system-ui;
+    font-size: 4rem;
+    animation: vibrate .8s infinite;
+    z-index: 2;
+}
+
+.hero-section{
+    display: flex;
+    min-height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.card-container{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    list-style: none;
+    width: 320px;
+    transition: .3s ease;
+}
+.card::before{
+    content: "";
+    display: block;
+    padding-bottom: 180%;
+    width: 100%;
+}
+.card-background{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transform-origin:bottom;
+    transform: scale(1) translateZ(0);
+    transition: .3s ease;
+    background-repeat: no-repeat;
+}
+.card:hover .card-background{
+    transform: scale(1.15) translateZ(0);
+    background-size: cover;
+}
+.card-container:hover .card:not(:hover){
+    transform: scale(.9);
+}
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-category{
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+.content{
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+}
+.cart-category{
+    color: #e0e0e0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.cart-heading{
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgb(0, 0, 0, .2);
+}
+
+/*Nav*/
+nav{
+    background-color: #97ce4c;
+    height: 8vh;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.logo{
+    width: 3.2vw;
+    display: flex;
+    margin-left: 3rem;
+}
+.content-nav{
+    display: flex;
+    gap: 2rem;
+}
+.content-nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #97ce4c;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background-color: #1a1e23;
+    padding: 1rem;
+    border-radius: 14px;
+    transition: .3s;
+    font-family: "Creepster", system-ui;
+}
+.content-nav a:hover{
+    color: #1a1e23;
+    background-color: #69a01c;
+}
+
+/*Footer*/
+footer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 1rem;
+    background-color: #181c20;
+}
+
+.perso-ubi{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.perso-ubi a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+.perso-ubi a:hover{
+    color: #97ce4c;
+}
+.img-footer{
+    display: flex;
+    width: 16px;
+    gap: 2rem;
+    justify-content: center;
+    transition: .3s;
+}
+.github:hover{
+    filter: hue-rotate(120deg)
+}
+.tuister:hover{
+    filter: hue-rotate(120deg)
+}
+.tiktok:hover{
+    filter: hue-rotate(120deg)
+}
+p{
+    color: #fff;
+    font-size: 1.1rem;
+}
+p span{
+    color: #97ce4c;
+    transition: .3s;
+}
+p span:hover{
+    color: #69a01c;
+    cursor: pointer;
+
+}
+@media  (max-width: 500px) {
+    .titulo{
+        font-size: 3rem;
+    }
+    .logo{
+        width: 10vw;
+    }
+    .content-nav a{
+        font-size: .8rem;
+        padding: 1rem;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+    .card{
+        height:20rem ;
+    }
+    .card-background{
+        background-position: 0 0;
+        margin-left: 5rem;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,230 @@
+*{  
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Poppind', sans-serif;
+}
+body{
+    height: 100%;
+    background-color: #1a1e23;
+}
+
+
+/*Nav*/
+nav{
+    background-color: #97ce4c;
+    height: 8vh;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.logo{
+    width: 3.2vw;
+    display: flex;
+    margin-left: 3rem;
+}
+.content-nav{
+    display: flex;
+    gap: 2rem;
+}
+.content-nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #97ce4c;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background-color: #1a1e23;
+    padding: 1rem;
+    border-radius: 14px;
+    transition: .3s;
+    font-family: "Creepster", system-ui;
+}
+.content-nav a:hover{
+    color: #1a1e23;
+    background-color: #69a01c;
+}
+
+/*Footer*/
+footer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 1rem;
+    background-color: #181c20;
+}
+
+.perso-ubi{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.perso-ubi a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+.perso-ubi a:hover{
+    color: #97ce4c;
+}
+.img-footer{
+    display: flex;
+    width: 16px;
+    gap: 2rem;
+    justify-content: center;
+    transition: .3s;
+}
+.github:hover{
+    filter: hue-rotate(120deg)
+}
+.tuister:hover{
+    filter: hue-rotate(120deg)
+}
+.tiktok:hover{
+    filter: hue-rotate(120deg)
+}
+p{
+    color: #fff;
+    font-size: 1.1rem;
+}
+p span{
+    color: #97ce4c;
+    transition: .3s;
+}
+p span:hover{
+    color: #69a01c;
+    cursor: pointer;
+
+}
+/*cards*/
+.container{
+    margin-top: 5rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3px;
+}
+.container .card{
+    position: relative;
+    max-width: 300px;
+    width: 30rem;
+    height: 215px;
+    background-color: #fff;
+    margin: 30px 5px;
+    padding: 35px 1px 50px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgb(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover{
+    height: 520px;
+}
+
+.container .card .imgBX{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgb(0,0,0,0.5);
+}
+
+.container .card .imgBX img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.container .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition: 0.3s;
+}
+p{
+    color: #111;
+}
+
+
+/*titulo*/
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    color: #97ce4c;
+    letter-spacing: 5px;
+
+}
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .titulo {
+    font-family: "Creepster", system-ui;
+    font-size: 4rem;
+    animation: vibrate .8s infinite;
+    z-index: 2;
+}
+
+h4{
+    font-family: "Creepster", system-ui;
+    font-size: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color:  #96e626;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.flechas{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pagina{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media  (max-width: 500px) {
+    .titulo{
+        font-size: 3rem;
+    }
+    .logo{
+        width: 10vw;
+    }
+    .content-nav a{
+        font-size: .8rem;
+        padding: 1rem;
+    }
+}
